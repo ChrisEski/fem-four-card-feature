@@ -1,0 +1,111 @@
+.section {
+  // border: 1px solid green;
+  display: grid;
+  // justify-items: center;
+
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    &__title {
+      font-weight: $fw--light;
+      font-size: 24px;
+      margin-bottom: 18px;
+
+      span {
+        font-weight: $fw--bold;
+      }
+    }
+
+    &__subtitle {
+    }
+  }
+
+  .main {
+    // border: 1px solid green;
+    margin-bottom: 20px;
+
+    &__card {
+      // border: 1px solid red;
+      position: relative;
+      overflow: hidden;
+      min-width: 190px;
+      max-width: 350px;
+      background-color: $clr--white;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.125);
+      display: grid;
+      padding: 26px 30px 30px;
+      border-radius: 7px;
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 4px;
+      }
+
+      &--supervisor {
+        &::before {
+          background-color: $clr--cyan;
+        }
+      }
+      &--team {
+        &::before {
+          background-color: $clr--red;
+        }
+      }
+      &--karma {
+        &::before {
+          background-color: $clr--orange;
+        }
+      }
+      &--calculator {
+        &::before {
+          background-color: $clr--blue;
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        margin-bottom: 3px;
+      }
+
+      &-subtitle {
+        font-size: $fs--small;
+        margin-bottom: 38px;
+      }
+
+      &-img {
+        width: 55px;
+        aspect-ratio: 1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-self: end;
+
+        &.supervisor {
+          background-image: url('./../images/icon-supervisor.svg');
+        }
+        &.team {
+          background-image: url('./../images/icon-team-builder.svg');
+        }
+        &.karma {
+          background-image: url('./../images/icon-karma.svg');
+        }
+        &.calculator {
+          background-image: url('./../images/icon-calculator.svg');
+        }
+      }
+    }
+  }
+
+  .footer {
+  }
+}

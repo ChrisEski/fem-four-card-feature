@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $ff-main;
+  font-size: $fs--regular;
+}
+
+body {
+  background-color: $clr--bg;
+}
+
+h1,
+h2 {
+  color: $clr--title;
+}
+
+p {
+  color: $clr--text;
+  line-height: 1.6;
+}
+
+.container {
+  // border: 1px solid red;
+  width: 100%;
+  min-height: 100vh;
+  padding: 78px 32px;
+}
