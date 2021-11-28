@@ -225,6 +225,12 @@ p {
       justify-self: end;
 }
 
+@media (min-width: 1150px) {
+  .section .main__card-img {
+    width: 65px;
+  }
+}
+
 .section .main__card-img.supervisor {
   background-image: url("./../images/icon-supervisor.svg");
 }

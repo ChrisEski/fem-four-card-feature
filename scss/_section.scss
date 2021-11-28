@@ -143,6 +143,10 @@
         background-repeat: no-repeat;
         justify-self: end;
 
+        @media (min-width: $desktop) {
+          width: 65px;
+        }
+
         &.supervisor {
           background-image: url('./../images/icon-supervisor.svg');
         }
