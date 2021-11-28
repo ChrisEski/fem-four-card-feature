@@ -30,4 +30,11 @@ p {
   width: 100%;
   min-height: 100vh;
   padding: 78px 32px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+
+  @media (min-width: $desktop) {
+    padding: 80 0;
+  }
 }

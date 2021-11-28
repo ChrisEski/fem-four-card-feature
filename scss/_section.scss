@@ -1,7 +1,14 @@
 .section {
   // border: 1px solid green;
-  display: grid;
-  // justify-items: center;
+  // display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $desktop) {
+    // padding-inline: 100px;
+  }
 
   .header {
     text-align: center;
@@ -12,18 +19,36 @@
       font-size: 24px;
       margin-bottom: 18px;
 
+      @media (min-width: 900px) {
+        font-size: 37px;
+        line-height: 1.3;
+      }
+
       span {
         font-weight: $fw--bold;
       }
     }
 
     &__subtitle {
+      @media (min-width: 900px) {
+        max-width: 510px;
+        margin: 0 auto;
+      }
     }
   }
 
   .main {
     // border: 1px solid green;
     margin-bottom: 20px;
+
+    @media (min-width: $desktop) {
+      // border: 1px solid green;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 350px);
+      grid-auto-rows: 250px;
+      gap: 30px;
+    }
 
     &__card {
       // border: 1px solid red;
@@ -38,8 +63,16 @@
       border-radius: 7px;
       margin: 0 auto;
 
+      @media (min-width: $desktop) {
+        height: 250px;
+      }
+
       &:not(:last-child) {
         margin-bottom: 25px;
+
+        @media (min-width: $desktop) {
+          margin-bottom: 0;
+        }
       }
 
       &::before {
@@ -55,20 +88,40 @@
         &::before {
           background-color: $clr--cyan;
         }
+
+        @media (min-width: 900px) {
+          grid-row: span 2;
+          align-self: center;
+          order: 1;
+        }
       }
       &--team {
         &::before {
           background-color: $clr--red;
+        }
+
+        @media (min-width: 900px) {
+          order: 2;
         }
       }
       &--karma {
         &::before {
           background-color: $clr--orange;
         }
+
+        @media (min-width: 900px) {
+          order: 4;
+        }
       }
       &--calculator {
         &::before {
           background-color: $clr--blue;
+        }
+
+        @media (min-width: 900px) {
+          grid-row: span 2;
+          align-self: center;
+          order: 3;
         }
       }
 
@@ -106,6 +159,18 @@
     }
   }
 
-  .footer {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      font-size: 13px;
+    }
+
+    a {
+      color: $clr--title;
+      text-decoration: none;
+      font-weight: $fw--bold;
+    }
   }
 }
